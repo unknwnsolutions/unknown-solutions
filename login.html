@@ -33,27 +33,23 @@
         </div>
     </div>
 
-    <script>
+    <script type="module">
+        import { loginUser } from './js/firebase.js';
+
         document.getElementById('loginForm').addEventListener('submit', async (e) => {
             e.preventDefault();
             const errorDiv = document.getElementById('loginError');
             errorDiv.textContent = '';
 
-            const response = await fetch('/api/login', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    email: document.getElementById('email').value,
-                    password: document.getElementById('password').value
-                })
-            });
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
 
-            const data = await response.json();
+            const result = await loginUser(email, password);
 
-            if (response.ok) {
-                window.location.href = '/dashboard';
+            if (result.success) {
+                window.location.href = '/dashboard.html';
             } else {
-                errorDiv.textContent = data.error || 'Login failed';
+                errorDiv.textContent = result.error || 'Login failed';
             }
         });
     </script>
