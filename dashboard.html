@@ -11,15 +11,15 @@
     <!-- Header -->
     <header class="header">
         <div class="container header__container">
-            <a href="/dashboard" class="header__logo">
+            <a href="/index.html" class="header__logo">
                 <img src="./assets/logo.png" alt="Unknown Solutions Logo" class="header__logo-img" onerror="this.style.display='none'">
                 <span class="header__logo-text">Unknown Solutions</span>
             </a>
             <nav class="header__nav">
                 <ul class="header__nav-list">
-                    <li><a href="/dashboard" class="header__nav-link">Dashboard</a></li>
-                    <li><a href="/#education" class="header__nav-link">Education</a></li>
-                    <li><a href="/#resources" class="header__nav-link">Resources</a></li>
+                    <li><a href="/dashboard.html" class="header__nav-link">Dashboard</a></li>
+                    <li><a href="/index.html#education" class="header__nav-link">Education</a></li>
+                    <li><a href="/index.html#resources" class="header__nav-link">Resources</a></li>
                     <li><a href="#" class="header__nav-link" id="logoutBtn">Logout</a></li>
                 </ul>
             </nav>
@@ -149,65 +149,57 @@
         </div>
     </footer>
 
-    <script>
-        // Load user data
-        async function loadUserData() {
-            const response = await fetch('/api/user');
-            if (response.ok) {
-                const user = await response.json();
-                document.getElementById('userName').textContent = user.name;
-                
-                // Update progress stats
-                const modulesCompleted = user.progress.modulesCompleted.length;
-                document.getElementById('modulesCompleted').textContent = modulesCompleted;
-                document.getElementById('completionRate').textContent = Math.round((modulesCompleted / 5) * 100) + '%';
-                
-                // Update module statuses
-                user.progress.modulesCompleted.forEach(moduleId => {
-                    const statusEl = document.getElementById(`status-${moduleId}`);
-                    if (statusEl) {
-                        statusEl.innerHTML = '<i class="fas fa-check-circle"></i> Completed';
-                        statusEl.style.color = '#f5f5f7';
-                    }
-                });
-            } else {
-                window.location.href = '/login';
-            }
-        }
+    <script type="module">
+        import { onAuthChange, getUserProfile, logoutUser, completeModule } from './js/firebase.js';
 
-        // Mark module as completed
-        async function completeModule(moduleId) {
-            const response = await fetch('/api/progress/module', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ moduleId })
+        // Check auth state on load
+        onAuthChange(async (user) => {
+            if (!user) {
+                window.location.href = '/login.html';
+                return;
+            }
+
+            const profile = await getUserProfile();
+            if (!profile) return;
+
+            // Update welcome message
+            document.getElementById('userName').textContent = profile.name || 'Dreamer';
+
+            // Update progress stats
+            const modulesCompleted = profile.progress?.modulesCompleted?.length || 0;
+            document.getElementById('modulesCompleted').textContent = modulesCompleted;
+            document.getElementById('completionRate').textContent = Math.round((modulesCompleted / 5) * 100) + '%';
+            document.getElementById('resourcesDownloaded').textContent = profile.progress?.resourcesDownloaded?.length || 0;
+
+            // Update module statuses
+            profile.progress?.modulesCompleted?.forEach(moduleId => {
+                const statusEl = document.getElementById(`status-${moduleId}`);
+                if (statusEl) {
+                    statusEl.innerHTML = '<i class="fas fa-check-circle"></i> Completed';
+                    statusEl.style.color = '#f5f5f7';
+                }
             });
-            
-            if (response.ok) {
-                loadUserData();
-            }
-        }
-
-        // Logout
-        document.getElementById('logoutBtn').addEventListener('click', async (e) => {
-            e.preventDefault();
-            const response = await fetch('/api/logout', { method: 'POST' });
-            if (response.ok) {
-                window.location.href = '/';
-            }
         });
 
         // Add click handlers to module buttons for tracking
         document.querySelectorAll('.dashboard-module__btn').forEach(btn => {
-            btn.addEventListener('click', (e) => {
+            btn.addEventListener('click', async (e) => {
                 const moduleCard = e.target.closest('.dashboard-module');
                 const moduleId = moduleCard.dataset.module;
-                completeModule(moduleId);
+                await completeModule(moduleId);
+                // Reload progress
+                window.location.reload();
             });
         });
 
-        // Load data on page load
-        loadUserData();
+        // Logout
+        document.getElementById('logoutBtn').addEventListener('click', async (e) => {
+            e.preventDefault();
+            const result = await logoutUser();
+            if (result.success) {
+                window.location.href = '/';
+            }
+        });
     </script>
 </body>
 </html>
