@@ -43,7 +43,7 @@ const db = getFirestore(app);
  * @param {string} password - User's password (min 6 characters)
  * @returns {Promise<Object>} User data object
  */
-async function registerUser(name, email, password) {
+export async function registerUser(name, email, password) {
     try {
         // Create Firebase Auth user
         const userCredential = await createUserWithEmailAndPassword(auth, email, password);
@@ -75,7 +75,7 @@ async function registerUser(name, email, password) {
  * @param {string} password - User's password
  * @returns {Promise<Object>} User data object
  */
-async function loginUser(email, password) {
+export async function loginUser(email, password) {
     try {
         const userCredential = await signInWithEmailAndPassword(auth, email, password);
         return { success: true, user: userCredential.user };
@@ -88,7 +88,7 @@ async function loginUser(email, password) {
  * Sign out current user
  * @returns {Promise<void>}
  */
-async function logoutUser() {
+export async function logoutUser() {
     try {
         await signOut(auth);
         return { success: true };
@@ -102,7 +102,7 @@ async function logoutUser() {
  * @param {Function} callback - Function to call with user object or null
  * @returns {Function} Unsubscribe function
  */
-function onAuthChange(callback) {
+export function onAuthChange(callback) {
     return onAuthStateChanged(auth, callback);
 }
 
@@ -110,7 +110,7 @@ function onAuthChange(callback) {
  * Get current user's Firestore profile data
  * @returns {Promise<Object|null>} User profile data or null
  */
-async function getUserProfile() {
+export async function getUserProfile() {
     const user = auth.currentUser;
     if (!user) return null;
 
@@ -131,7 +131,7 @@ async function getUserProfile() {
  * @param {string} moduleId - Module identifier
  * @returns {Promise<Object>} Result object
  */
-async function completeModule(moduleId) {
+export async function completeModule(moduleId) {
     const user = auth.currentUser;
     if (!user) return { success: false, error: "Not authenticated" };
 
@@ -151,7 +151,7 @@ async function completeModule(moduleId) {
  * @param {string} resourceId - Resource identifier
  * @returns {Promise<Object>} Result object
  */
-async function trackResourceDownload(resourceId) {
+export async function trackResourceDownload(resourceId) {
     const user = auth.currentUser;
     if (!user) return { success: false, error: "Not authenticated" };
 
