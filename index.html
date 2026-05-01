@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unknown Solutions | Dreamers Island - Education Platform</title>
+    <meta name="description" content="Learn business growth strategies on Dreamers Island. Free education on graphic design, web development, photography, and business development for small businesses.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "Unknown Solutions - Dreamers Island",
+        "description": "Free business education platform teaching small business owners how to grow their businesses.",
+        "url": "http://localhost:3000"
+    }
+    </script>
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader" aria-label="Loading Unknown Solutions">
+        <img src="./assets/logo.png" alt="Unknown Solutions Logo" class="preloader__logo" onerror="this.style.display='none'">
+        <span class="preloader__text">Unknown Solutions</span>
+    </div>
+
+    <!-- Dreamers Island Presentation Slides -->
+    <div class="slides-overlay" id="slidesOverlay">
+        <button class="slides-close" id="closeSlides" aria-label="Close presentation">×</button>
+        <div class="slides-container">
+            <div class="slide slide--active">
+                <div class="slide__content">
+                    <h1 class="slide__title">Hi Dreamer, Welcome to Dreamers Island</h1>
+                    <p class="slide__subtitle">In this island, you will get to know how to plant a business from the ground level and watch it grow — just like a tree.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slide__content">
+                    <h2 class="slide__title">Plant Your Business at Ground Level</h2>
+                    <p class="slide__subtitle">Every mighty tree starts as a seed. Your business needs the same strong foundation.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slide__content">
+                    <h2 class="slide__title">According to Time, You Have to Make Changes</h2>
+                    <p class="slide__subtitle">Seasons change, and so does business. Learn when to adapt your nurturing strategy.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slide__content">
+                    <h2 class="slide__title">When It's Grown, It Will Take Care of Itself</h2>
+                    <p class="slide__subtitle">A fully-grown tree provides shade and fruit without constant attention. Build a business that sustains itself.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slide__content">
+                    <h2 class="slide__title">Ready to Plant Your Dream?</h2>
+                    <div class="slide__cta-group">
+                        <a href="/register" class="btn btn--primary slide__cta">Join Dreamers Island</a>
+                        <a href="/login" class="btn btn--primary slide__cta">Already a Dreamer? Sign In</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header / Nav -->
+    <header class="header">
+        <div class="container header__container">
+            <a href="#" class="header__logo">
+                <img src="./assets/logo.png" alt="Unknown Solutions Logo" class="header__logo-img" onerror="this.style.display='none'">
+                <span class="header__logo-text">Unknown Solutions</span>
+            </a>
+            <button class="header__hamburger" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li><a href="#education" class="header__nav-link">Education</a></li>
+                    <li><a href="#resources" class="header__nav-link">Resources</a></li>
+                    <li><a href="#about" class="header__nav-link">About</a></li>
+                    <li><a href="/login" class="header__nav-link header__login-btn">Login</a></li>
+                    <li><a href="#contact" class="header__nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero section">
+        <div class="container hero__container">
+            <h1 class="hero__title">Learn the Strategies Your Small Business Needs to Grow</h1>
+            <p class="hero__subtitle">Free, practical education for small business owners — no catch, no pitch.</p>
+            <a href="#education" class="btn btn--primary hero__cta">Start Learning</a>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section education" id="education">
+        <div class="container">
+            <h2 class="section__title">Growth Pillars</h2>
+            <p class="section__subtitle">Plant your business knowledge across five core areas</p>
+            <div class="education__modules">
+                <!-- Module1: Graphic Design -->
+                <div class="education-module">
+                    <button class="education-module__toggle" aria-expanded="false" aria-controls="module-graphic-design">
+                        <div class="education-module__header">
+                            <div class="education-module__icon">
+                                <i class="fas fa-palette"></i>
+                            </div>
+                            <h3 class="education-module__title">Graphic Design: Your Root System</h3>
+                            <i class="fas fa-chevron-down education-module__arrow"></i>
+                        </div>
+                    </button>
+                    <div class="education-module__content" id="module-graphic-design">
+                        <div class="education-module__body">
+                            <p>Graphic design creates the visual foundation for your business — just like roots anchor and nourish a tree. Professional visuals communicate trust before a single word is spoken. 75% of consumers judge a business's credibility based on visual identity alone.</p>
+
+                            <h4>What is Graphic Design?</h4>
+                            <p>Producing visual assets for print and digital media. This covers logos, stationery, marketing collateral, and communication graphics that make your brand recognizable and cohesive.</p>
+
+                            <h4>Deliverables (Your Growth Tools)</h4>
+                            <ul>
+                                <li><strong>Logos and brandmarks</strong> — The face of your business</li>
+                                <li><strong>Business cards and stationery</strong> — Physical touchpoints</li>
+                                <li><strong>Brochures, flyers, posters</strong> — Print-ready marketing materials</li>
+                                <li><strong>Social media graphics</strong> — Digital assets for online presence</li>
+                                <li><strong>Infographics</strong> — Complex information made visual</li>
+                            </ul>
+
+                            <h4>Colour Theory: Nurturing with the Right Palette</h4>
+                            <p>Colour combinations directly impact customer emotions and buying decisions. Common schemes include:</p>
+                            <ul>
+                                <li><strong>Complementary</strong> (opposite on colour wheel, e.g., blue/orange) — High contrast, great for CTAs</li>
+                                <li><strong>Analogous</strong> (neighbours on the wheel) — Harmonious, calming effect</li>
+                                <li><strong>Triadic</strong> (three evenly-spaced hues) — Balanced vibrancy</li>
+                                <li><strong>Monochrome</strong> (one hue with tints/shades) — Sophisticated and clean</li>
+                            </ul>
+
+                            <h4>Psychological Impact of Colours</h4>
+                            <p>Different colours trigger specific emotional responses:</p>
+                            <ul>
+                                <li><strong>Red</strong>: Excitement, urgency, appetite (ideal for food vendors)</li>
+                                <li><strong>Blue</strong>: Trust, calmness, professionalism (ideal for services, barbers)</li>
+                                <li><strong>Green</strong>: Growth, nature, health (ideal for organic/sustainable products)</li>
+                                <li><strong>Yellow</strong>: Energy, optimism, attention-grabbing</li>
+                            </ul>
+
+                            <h4>Cultural Considerations</h4>
+                            <p>Colour meanings vary globally: White signifies purity in Western cultures but mourning in parts of Asia. Green has sacred significance in Muslim-majority regions. Choose colours that respect your audience's cultural context.</p>
+
+                            <h4>Accessibility (WCAG Compliance)</h4>
+                            <p>Ensure text remains legible: WCAG 2.1 Level AA requires a contrast ratio of at least 4.5:1 for normal text (3:1 for large text). Use tools like WebAIM Contrast Checker to verify your combinations.</p>
+
+                            <h4>10 Practical Colour Palettes (Hex Codes)</h4>
+                            <div class="palette-grid">
+                                <div class="palette">
+                                    <div class="palette__swatches">
+                                        <span style="background:#000000" title="#000000"></span>
+                                        <span style="background:#FFFFFF" title="#FFFFFF"></span>
+                                        <span style="background:#FF0000" title="#FF0000"></span>
+                                        <span style="background:#0000FF" title="#0000FF"></span>
+                                        <span style="background:#00FF00" title="#00FF00"></span>
+                                    </div>
+                                    <p class="palette__name">High-Contrast Primaries</p>
+                                    <p class="palette__use">Tech or youth brands, dynamic visuals</p>
+                                </div>
+                                <div class="palette">
+                                    <div class="palette__swatches">
+                                        <span style="background:#8B0000" title="#8B0000"></span>
+                                        <span style="background:#FF6347" title="#FF6347"></span>
+                                        <span style="background:#FFDAB9" title="#FFDAB9"></span>
+                                        <span style="background:#FFF5EE" title="#FFF5EE"></span>
+                                        <span style="background:#4B0082" title="#4B0082"></span>
+                                    </div>
+                                    <p class="palette__name">Warm Sunset</p>
+                                    <p class="palette__use">Creative portfolios, food/beverage themes</p>
+                                </div>
+                                <div class="palette">
+                                    <div class="palette__swatches">
+                                        <span style="background:#0D47A1" title="#0D47A1"></span>
+                                        <span style="background:#1976D2" title="#1976D2"></span>
+                                        <span style="background:#90CAF9" title="#90CAF9"></span>
+                                        <span style="background:#E3F2FD" title="#E3F2FD"></span>
+                                        <span style="background:#FFFFFF" title="#FFFFFF"></span>
+                                    </div>
+                                    <p class="palette__name">Cool Tech</p>
+                                    <p class="palette__use">Trustworthy tech/finance, clean and modern</p>
+                                </div>
+                                <div class="palette">
+                                    <div class="palette__swatches">
+                                        <span style="background:#8B4513" title="#8B4513"></span>
+                                        <span style="background:#CD853F" title="#CD853F"></span>
+                                        <span style="background:#DEB887" title="#DEB887"></span>
+                                        <span style="background:#F5F5DC" title="#F5F5DC"></span>
+                                        <span style="background:#2F4F4F" title="#2F4F4F"></span>
+                                    </div>
+                                    <p class="palette__name">Earth Tones</p>
+                                    <p class="palette__use">Organic, nature or outdoor brands; eco-friendly</p>
+                                </div>
+                                <div class="palette">
+                                    <div class="palette__swatches">
+                                        <span style="background:#006400" title="#006400"></span>
+                                        <span style="background:#228B22" title="#228B22"></span>
+                                        <span style="background:#8FBC8F" title="#8FBC8F"></span>
+                                        <span style="background:#F0E68C" title="#F0E68C"></span>
+                                        <span style="background:#FFFFFF" title="#FFFFFF"></span>
+                                    </div>
+                                    <p class="palette__name">Fresh Greens</p>
+                                    <p class="palette__use">Health, sustainability or botanical products</p>
+                                </div>
+                                <div class="palette">
+                                    <div class="palette__swatches">
+                                        <span style="background:#FFB6C1" title="#FFB6C1"></span>
+                                        <span style="background:#BAE1FF" title="#BAE1FF"></span>
+                                        <span style="background:#FFFFBA" title="#FFFFBA"></span>
+                                        <span style="background:#BAFFC9" title="#BAFFC9"></span>
+                                        <span style="background:#FFDAC1" title="#FFDAC1"></span>
+                                    </div>
+                                    <p class="palette__name">Playful Pastels</p>
+                                    <p class="palette__use">Friendly, lifestyle or children's brands</p>
+                                </div>
+                                <div class="palette">
+                                    <div class="palette__swatches">
+                                        <span style="background:#FF4500" title="#FF4500"></span>
+                                        <span style="background:#32CD32" title="#32CD32"></span>
+                                        <span style="background:#1E90FF" title="#1E90FF"></span>
+                                        <span style="background:#FFD700" title="#FFD700"></span>
+                                        <span style="background:#4B0082" title="#4B0082"></span>
+                                    </div>
+                                    <p class="palette__name">Vibrant Contrast</p>
+                                    <p class="palette__use">Creative industries, entertainment; bold highlights</p>
+                                </div>
+                                <div class="palette">
+                                    <div class="palette__swatches">
+                                        <span style="background:#FFFFFF" title="#FFFFFF"></span>
+                                        <span style="background:#F0F0F0" title="#F0F0F0"></span>
+                                        <span style="background:#BBBBBB" title="#BBBBBB"></span>
+                                        <span style="background:#333333" title="#333333"></span>
+                                        <span style="background:#FF5722" title="#FF5722"></span>
+                                    </div>
+                                    <p class="palette__name">Neutral & Accent</p>
+                                    <p class="palette__use">Clean corporate or portfolio sites</p>
+                                </div>
+                                <div class="palette">
+                                    <div class="palette__swatches">
+                                        <span style="background:#222222" title="#222222"></span>
+                                        <span style="background:#555555" title="#555555"></span>
+                                        <span style="background:#888888" title="#888888"></span>
+                                        <span style="background:#BBBBBB" title="#BBBBBB"></span>
+                                        <span style="background:#EEEEEE" title="#EEEEEE"></span>
+                                    </div>
+                                    <p class="palette__name">Monochrome Gray</p>
+                                    <p class="palette__use">Sleek minimal sites; ensure button contrast</p>
+                                </div>
+                                <div class="palette">
+                                    <div class="palette__swatches">
+                                        <span style="background:#FF8C00" title="#FF8C00"></span>
+                                        <span style="background:#FFA500" title="#FFA500"></span>
+                                        <span style="background:#FFEB3B" title="#FFEB3B"></span>
+                                        <span style="background:#FFFACD" title="#FFFACD"></span>
+                                        <span style="background:#FFFFFF" title="#FFFFFF"></span>
+                                    </div>
+                                    <p class="palette__name">Sunrise Palette</p>
+                                    <p class="palette__use">Optimistic feel for wellness or summer themes</p>
+                                </div>
+                            </div>
+
+                            <h4>Who Benefits</h4>
+                            <p>Marketers and business owners who want polished, cohesive branding across print and digital channels. Small-to-medium businesses, non-profits, and event organizers all benefit from professional visual assets.</p>
+
+                            <h4>Frequently Asked Questions</h4>
+                            <ul>
+                                <li><strong>Can you ensure consistency with our brand?</strong> Yes, we follow brand guidelines and create assets that align with your visual identity.</li>
+                                <li><strong>What file formats will I get?</strong> Print-ready PDFs, high-resolution PNGs/JPEGs for digital use, and vector formats (AI, EPS, SVG) for scalability.</li>
+                                <li><strong>How many revisions?</strong> Typically 2-3 concepts with iteration rounds until it's perfect for your brand.</li>
+                            </ul>
+
+                            <p class="education-module__note">Prefer to focus on your business? We can handle your design needs when you're ready.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Module2: Website Design -->
+                <div class="education-module">
+                    <button class="education-module__toggle" aria-expanded="false" aria-controls="module-website-design">
+                        <div class="education-module__header">
+                            <div class="education-module__icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <h3 class="education-module__title">Website Design: Digital Presence</h3>
+                            <i class="fas fa-chevron-down education-module__arrow"></i>
+                        </div>
+                    </button>
+                    <div class="education-module__content" id="module-website-design">
+                        <div class="education-module__body">
+                            <p>In today's era, customers don't visit shops without first checking online. 78% of consumers research a business online before visiting in person or making a purchase. Your website is the trunk that supports all digital growth.</p>
+
+                            <h4>What is Web Development?</h4>
+                            <p>Building and deploying websites and web applications. This turns designs into working online products that serve your customers 24/7.</p>
+
+                            <h4>Deliverables (Your Growth Tools)</h4>
+                            <ul>
+                                <li><strong>Responsive websites</strong> — Work perfectly on all devices</li>
+                                <li><strong>E-commerce stores</strong> — Sell products online with secure payments</li>
+                                <li><strong>Content Management Systems (CMS)</strong> — Update content yourself easily</li>
+                                <li><strong>Web applications</strong> — Custom functionality for your business</li>
+                                <li><strong>Backend systems and APIs</strong> — Power your digital operations</li>
+                            </ul>
+
+                            <h4>Why You Need an Online Presence</h4>
+                            <p>Customers expect to find your business on Google, view your products/services, and contact you easily. Without a website, you're invisible to 8 out of 10 potential customers. A website that isn't mobile-friendly loses half your audience immediately.</p>
+
+                            <h4>Our Process: From Seed to Tree</h4>
+                            <ul>
+                                <li><strong>Planning</strong> — Define your goals and audience</li>
+                                <li><strong>Development</strong> — Code your site with best practices</li>
+                                <li><strong>Testing</strong> — Ensure everything works perfectly</li>
+                                <li><strong>Launch</strong> — Go live and start growing</li>
+                            </ul>
+
+                            <h4>Who Benefits</h4>
+                            <p>Any organization needing a robust online presence — especially businesses expanding into e-commerce or digitizing services. Local shops, online retailers, and service providers all need a strong digital trunk.</p>
+
+                            <h4>Frequently Asked Questions</h4>
+                            <ul>
+                                <li><strong>Which platform or CMS do you use?</strong> We recommend solutions based on your needs — WordPress for content sites, Shopify for e-commerce, or custom builds for complex applications.</li>
+                                <li><strong>How long until the site is live?</strong> Simple sites: 2-4 weeks. E-commerce/complex sites: 6-12 weeks depending on features.</li>
+                                <li><strong>Who will host and maintain it?</strong> We provide hosting guidance and optional maintenance plans to keep your site healthy.</li>
+                            </ul>
+
+                            <p class="education-module__note">Prefer to focus on your business? We can build your website when you're ready.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Module3: Product Photography -->
+                <div class="education-module">
+                    <button class="education-module__toggle" aria-expanded="false" aria-controls="module-photography">
+                        <div class="education-module__header">
+                            <div class="education-module__icon">
+                                <i class="fas fa-camera"></i>
+                            </div>
+                            <h3 class="education-module__title">Product Photography: Visual Appeal</h3>
+                            <i class="fas fa-chevron-down education-module__arrow"></i>
+                        </div>
+                    </button>
+                    <div class="education-module__content" id="module-photography">
+                        <div class="education-module__body">
+                            <p>Products with high-quality images sell 40% more than those with low-quality or no images. Customers can't touch or try your products online — your photos are the only way to convey quality and desirability.</p>
+
+                            <h4>What is Professional Photography?</h4>
+                            <p>Providing professional images for marketing and branding. Includes photo shoots (on-location or in-studio) followed by expert editing to create compelling visuals.</p>
+
+                            <h4>Deliverables (Your Growth Tools)</h4>
+                            <ul>
+                                <li><strong>20-40 edited photos per shoot</strong> — High-resolution, retouched images</li>
+                                <li><strong>Web and print formats</strong> — Optimized for every use case</li>
+                                <li><strong>Usage rights licence</strong> — Clear permissions for how you can use images</li>
+                                <li><strong>Shoot planning</strong> — Brief development and shot lists</li>
+                            </ul>
+
+                            <h4>Social Media-Ready Images</h4>
+                            <p>Social platforms prioritize visual content. Clear, well-lit product photos increase engagement by 2-3x, putting your products in front of more potential customers. Each platform has ideal dimensions — we handle that for you.</p>
+
+                            <h4>Food Photography for Sellers</h4>
+                            <p>For home-based food sellers, appetizing photos are the difference between a scroll-past and a sale. Proper lighting, styling, and angle make food look fresh and desirable. We capture the textures and colors that make mouths water.</p>
+
+                            <h4>Our Process: Capturing Your Growth</h4>
+                            <ul>
+                                <li><strong>Consultation</strong> — Understand your brand and products</li>
+                                <li><strong>Shoot</strong> — Professional photography session</li>
+                                <li><strong>Editing</strong> — Color correction, retouching, enhancement</li>
+                                <li><strong>Delivery</strong> — Organized files ready for use</li>
+                            </ul>
+
+                            <h4>Who Benefits</h4>
+                            <p>Companies and individuals needing high-quality visuals — e-commerce stores needing product photos, professionals needing headshots, or event organizers needing coverage. Retailers, restaurants, and service providers all grow with better imagery.</p>
+
+                            <h4>Frequently Asked Questions</h4>
+                            <ul>
+                                <li><strong>How many images will we get?</strong> Typically 20-40 edited, high-resolution photos per session, depending on shoot complexity.</li>
+                                <li><strong>Can we get both web and print versions?</strong> Yes, all images come in multiple resolutions optimized for web (smaller) and print (high-res).</li>
+                                <li><strong>What usage rights are included?</strong> Standard licence included for web, social, and print marketing. Extended licences available for packaging, advertising, etc.</li>
+                            </ul>
+
+                            <p class="education-module__note">Prefer to focus on your business? We can create your product photos when you're ready.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Module4: Product Videography -->
+                <div class="education-module">
+                    <button class="education-module__toggle" aria-expanded="false" aria-controls="module-videography">
+                        <div class="education-module__header">
+                            <div class="education-module__icon">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <h3 class="education-module__title">Product Videography: Dynamic Growth</h3>
+                            <i class="fas fa-chevron-down education-module__arrow"></i>
+                        </div>
+                    </button>
+                    <div class="education-module__content" id="module-videography">
+                        <div class="education-module__body">
+                            <p>Video content generates 1200% more shares than text and images combined. Short-form videos (Reels, TikTok) have the highest engagement rate of any content type. Video is the wind that carries your tree's seeds far and wide.</p>
+
+                            <h4>Why Video Works</h4>
+                            <p>Videos show your product in action, build trust faster than static images, and create emotional connections with viewers. 84% of consumers say a brand's video convinced them to buy a product. Video allows customers to see quality, scale, and usage — removing doubts that text alone can't address.</p>
+
+                            <h4>Short-Form Content Strategy</h4>
+                            <p>15-60 second clips that highlight product benefits, behind-the-scenes content, or customer testimonials perform best. Consistency is key — 2-3 videos per week can double your online visibility. Platforms prioritize video content in their algorithms.</p>
+
+                            <h4>Deliverables</h4>
+                            <ul>
+                                <li><strong>Short promotional videos</strong> — 15-60 second clips for social media</li>
+                                <li><strong>Reels / TikTok content</strong> — Trend-aware, platform-optimized videos</li>
+                                <li><strong>Product showcase clips</strong> — In-depth looks at features and benefits</li>
+                                <li><strong>Behind-the-scenes content</strong> — Humanize your brand with process videos</li>
+                            </ul>
+
+                            <h4>Who Benefits</h4>
+                            <p>Businesses wanting higher engagement and online attention. E-commerce stores, restaurants, service providers, and personal brands all grow faster with video. If your customers are on social media, video is non-negotiable.</p>
+
+                            <p class="education-module__note">Prefer to focus on your business? We can create your videos when you're ready.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Module5: Business Development -->
+                <div class="education-module">
+                    <button class="education-module__toggle" aria-expanded="false" aria-controls="module-business-dev">
+                        <div class="education-module__header">
+                            <div class="education-module__icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h3 class="education-module__title">Business Development: Strategy for Growth</h3>
+                            <i class="fas fa-chevron-down education-module__arrow"></i>
+                        </div>
+                    </button>
+                    <div class="education-module__content" id="module-business-dev">
+                        <div class="education-module__body">
+                            <p>Most small businesses fail not because their product is bad, but because they lack strategy. Sustainable growth comes from understanding your customers, pricing correctly, and promoting effectively. This is the knowledge that helps your tree bear fruit season after season.</p>
+
+                            <h4>Pricing Strategies</h4>
+                            <p>Underpricing hurts your profit margin, overpricing loses customers. Learn to calculate your costs, factor in time, and set prices that reflect your value while staying competitive. We teach cost-plus pricing, value-based pricing, and competitive analysis.</p>
+
+                            <h4>Customer Attraction Ideas</h4>
+                            <p>Word-of-mouth is powerful, but combining it with referral programs, social media promotions, and local partnerships accelerates growth exponentially. We cover both digital marketing (SEO, content, ads, social media) and traditional channels (print, events, partnerships).</p>
+
+                            <h4>Deliverables (Your Growth Tools)</h4>
+                            <ul>
+                                <li><strong>Marketing strategy plans</strong> — Roadmap for reaching customers</li>
+                                <li><strong>SEO audits and keyword research</strong> — Get found on Google</li>
+                                <li><strong>Ad campaign designs</strong> — PPC ads, social media ads, retargeting</li>
+                                <li><strong>Content calendars</strong> — Consistent posting strategy</li>
+                                <li><strong>Analytics reports</strong> — Measure what's working and optimize</li>
+                                <li><strong>Strategy reports and action plans</strong> — Expert guidance documents</li>
+                            </ul>
+
+                            <h4>Promotion Planning</h4>
+                            <p>Random promotions waste money. Strategic promotions tied to holidays, local events, or slow periods drive consistent traffic and sales. We teach you to plan 3-6 months ahead, aligning promotions with your business cycles and customer behavior patterns.</p>
+
+                            <h4>Who Benefits</h4>
+                            <p>Companies aiming to increase visibility, leads, or engagement — especially those selling products/services online or in competitive markets. Startups seeking go-to-market strategy and established businesses streamlining operations all benefit from strategic guidance.</p>
+
+                            <h4>Frequently Asked Questions</h4>
+                            <ul>
+                                <li><strong>Which channels will you focus on?</strong> We assess your audience and recommend a mix — typically Google (SEO/ads), Facebook/Instagram, and email marketing for most small businesses.</li>
+                                <li><strong>How do you measure ROI?</strong> We track traffic, conversion rates, cost per lead, and sales attributed to each channel using analytics tools.</li>
+                                <li><strong>Can you manage both digital and print ads?</strong> Yes, integrated campaigns across digital and traditional channels often perform best for local businesses.</li>
+                                <li><strong>How do you charge (project or hourly)?</strong> Strategy consulting can be project-based (fixed deliverables) or retainer-based (ongoing guidance).</li>
+                            </ul>
+
+                            <p class="education-module__note">Prefer to focus on your business? We can guide your growth strategy when you're ready.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section class="section resources" id="resources">
+        <div class="container">
+            <h2 class="section__title">Free Resources</h2>
+            <p class="section__subtitle">Tools to help you apply what you've learned</p>
+            <div class="resources__grid">
+                <div class="resource-card glass">
+                    <i class="fas fa-palette resource-card__icon"></i>
+                    <h3 class="resource-card__title">Color Combination Guide</h3>
+                    <p class="resource-card__description">Download our guide to proven color palettes for small businesses</p>
+                    <a href="#" class="resource-card__link">Download (Coming Soon)</a>
+                </div>
+                <div class="resource-card glass">
+                    <i class="fas fa-globe resource-card__icon"></i>
+                    <h3 class="resource-card__title">Website Launch Checklist</h3>
+                    <p class="resource-card__description">Essential steps to launch your first business website</p>
+                    <a href="#" class="resource-card__link">Download (Coming Soon)</a>
+                </div>
+                <div class="resource-card glass">
+                    <i class="fas fa-camera resource-card__icon"></i>
+                    <h3 class="resource-card__title">Product Photography Tips</h3>
+                    <p class="resource-card__description">DIY photography guide for home-based sellers</p>
+                    <a href="#" class="resource-card__link">Download (Coming Soon)</a>
+                </div>
+                <div class="resource-card glass">
+                    <i class="fas fa-video resource-card__icon"></i>
+                    <h3 class="resource-card__title">Short-Form Video Script Template</h3>
+                    <p class="resource-card__description">Ready-to-use templates for Reels and TikTok</p>
+                    <a href="#" class="resource-card__link">Download (Coming Soon)</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <h2 class="section__title">About Unknown Solutions</h2>
+            <div class="about__content">
+                <div class="about__text">
+                    <p>Unknown Solutions teaches small business owners the strategies they need to succeed. We share real-world knowledge first — optional hands-on support is available if you'd rather focus on your business.</p>
+                    <p>We focus on entrepreneurs who are often overlooked: roadside vendors, home-based sellers, barbers, and solo business owners. Our goal is to help you transform your business into a visible, professional, and profitable venture through education.</p>
+                </div>
+                <div class="about__mission">
+                    <h3 class="about__mission-title">Our Approach</h3>
+                <ul class="about__mission-list">
+                    <li class="about__mission-item">Education first, no hard sell</li>
+                    <li class="about__mission-item">Practical, actionable strategies</li>
+                    <li class="about__mission-item">Optional hands-on support available</li>
+                    <li class="about__mission-item">Focus on your growth, not our profit</li>
+                </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="section portfolio" id="portfolio">
+        <div class="container">
+            <h2 class="section__title">Real-World Results</h2>
+            <p class="section__subtitle">Examples of education applied successfully</p>
+            <div class="portfolio__grid">
+                <div class="portfolio-card glass">
+                    <img src="https://via.placeholder.com/1200x400/1a1a1a/ffffff?text=Graphic+Design+Results" alt="Graphic Design Results" class="portfolio-card__img">
+                </div>
+                <div class="portfolio-card glass">
+                    <img src="https://via.placeholder.com/1200x400/1a1a1a/ffffff?text=Website+Design+Results" alt="Website Design Results" class="portfolio-card__img">
+                </div>
+                <div class="portfolio-card glass">
+                    <img src="https://via.placeholder.com/1200x400/1a1a1a/ffffff?text=Photography+Results" alt="Photography Results" class="portfolio-card__img">
+                </div>
+                <div class="portfolio-card glass">
+                    <img src="https://via.placeholder.com/1200x400/1a1a1a/ffffff?text=Videography+Results" alt="Videography Results" class="portfolio-card__img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <h2 class="section__title">Get in Touch</h2>
+            <p class="section__subtitle">Ready to grow your business? Contact us today.</p>
+            <div class="contact__content">
+                <div class="contact__info">
+                    <div class="contact__info-item">
+                        <i class="fas fa-phone contact__info-icon"></i>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <a href="https://wa.me/1234567890" class="contact__info-link">+1 (234) 567-890 (Placeholder)</a>
+                        </div>
+                    </div>
+                    <div class="contact__info-item">
+                        <i class="fas fa-envelope contact__info-icon"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:hello@unknownsolutions.com" class="contact__info-link">hello@unknownsolutions.com (Placeholder)</a>
+                        </div>
+                    </div>
+                    <div class="contact__info-item">
+                        <i class="fas fa-share-alt contact__info-icon"></i>
+                        <div>
+                            <h4>Social Media</h4>
+                            <div class="contact__social-links">
+                                <a href="#" class="contact__social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="contact__social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="contact__social-link" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact__form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" id="name" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea id="message" class="form-input form-textarea" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary contact__submit">Send Message</button>
+                    <p class="contact__form-note">Form is frontend only. Integrate with Formspree/EmailJS to receive messages.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer__container">
+            <p class="footer__tagline">Where Local Stories Meet Bold Strategies</p>
+            <div class="footer__links">
+                <a href="#education" class="footer__link">Education</a>
+                <a href="#resources" class="footer__link">Resources</a>
+                <a href="#about" class="footer__link">About</a>
+                <a href="#contact" class="footer__link">Contact</a>
+            </div>
+            <p class="footer__copyright">&copy; 2026 Unknown Solutions. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/slides.js"></script>
+</body>
+</html>
