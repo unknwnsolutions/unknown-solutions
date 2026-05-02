@@ -28,7 +28,7 @@
                 <button type="submit" class="btn btn--primary auth-submit">Sign In</button>
             </form>
             <div class="auth-footer">
-                <p>Don't have an account? <a href="/register" class="auth-link">Register</a></p>
+                <p>Don't have an account? <a href="/register.html" class="auth-link">Register</a></p>
             </div>
         </div>
     </div>
@@ -45,6 +45,7 @@
             const password = document.getElementById('password').value;
 
             const result = await loginUser(email, password);
+            console.log('Login result:', result);
 
             if (result.success) {
                 window.location.href = '/dashboard.html';
